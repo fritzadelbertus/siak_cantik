@@ -1,0 +1,92 @@
+$text-color: #F7F7F7;
+$color-white: #F7F7F7;
+$color-white-2: #E1E1E1;
+$color-white-3: #CFCFCF;
+$color-dark-4: #626262;
+$color-dark-2: #3B3B3B;
+$color-dark: #222222;
+$base-color:#121212;
+$color-orange: #ff8906;
+$color-orange-2: #ffc786;
+$color-orange-dark: #b46102;
+
+@mixin blur {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8ox 32px 0 rgba(0,0,0,0.37);
+}
+  
+body {
+    #t_o {
+
+        #t_h {
+            .w0 {
+                .w1 {
+                    .lang {
+                    }
+                }
+            }
+        }
+        #t_m {
+            .w0 {
+                .w1 {
+                    #nv {
+                    }
+                    #m_b {
+                        background: transparent;
+                        #m_b1 {
+                            .small-nav {
+                                li {
+                                    background-color: $color-orange-dark;
+                                    &.current {
+                                        background-color: $color-orange;
+                                    }
+                                    &:hover {
+                                        background-color: $color-orange-2;
+                                    }
+                                    a {
+                                        color: $color-white;
+                                    }
+                                    svg {
+                                        fill: $color-white;
+                                    }
+                                }
+                            }
+                            #ti_m {
+                                background: linear-gradient(160deg, $color-orange 50%, $color-orange-dark);
+                                h1 {
+                                    color: $text-color
+                                }
+                                #ti_m1 {
+                                    @include blur;
+                                    .stats-box {
+                                        color: $color-white;
+                                        div {
+                                            border-bottom-color: $color-orange-2;
+                                            &.ipk-container {
+                                                .ipk {
+                                                    border-color: $color-orange-2;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .tab {
+                                    }
+                                    & > img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .foot {
+                    }
+                }
+            }
+        }
+    }
+    
+    background-color: $base-color;
+    
+}
