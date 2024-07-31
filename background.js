@@ -6,20 +6,27 @@ chrome.runtime.onInstalled.addListener(() => {
 
 const root = "https://academic.ui.ac.id/main"
 const path_pattern = /https?:\/\/academic\.ui\.ac\.id\/([\w\/]+)/
-const endpoint = (url) => path_pattern.exec(url)[1].toLowerCase()
+const endpoint = (url) => path_pattern.exec(url)[1]
+
 
 chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
     if (tab.url.startsWith(root)) {
         currState = await chrome.action.getBadgeText({ tabId: tab.id });
         if (changeInfo.status == 'complete' && tab.active && currState == 'ON') {
             await chrome.scripting.insertCSS({
-                files: [`${endpoint(tab.url)}/inject.css`],
+                files: ['styles/inject.css', `${endpoint(tab.url)}/style.css`],
                 target: { tabId: tab.id },
             });
             await chrome.scripting.executeScript({
-                files: [`${endpoint(tab.url)}/inject.js`, `${endpoint(tab.url)}/mount.js`],
+                args: [ tab.url ],
+                function: (url) => {console.log(/https?:\/\/academic\.ui\.ac\.id\/([\w\/]+)/.exec(url)[1]);},
                 target: { tabId: tab.id },
             })
+            await chrome.scripting.executeScript({
+                files: [`scripts/inject.js`, `scripts/mount.js`, `${endpoint(tab.url)}/inject.js`],
+                target: { tabId: tab.id },
+            })
+            
         }
     }
     
@@ -38,20 +45,20 @@ chrome.action.onClicked.addListener(async (tab) => {
         });
         if (nextState === "ON") {
             await chrome.scripting.insertCSS({
-                files: [`${endpoint(tab.url)}/inject.css`],
+                files: ['styles/inject.css', `${endpoint(tab.url)}/style.css`],
                 target: { tabId: tab.id },
             });
             await chrome.scripting.executeScript({
-                files: [`${endpoint(tab.url)}/mount.js`],
+                files: [`scripts/mount.js`],
                 target: { tabId: tab.id },
             })
           } else if (nextState === "OFF") {
             await chrome.scripting.removeCSS({
-                files: [`${endpoint(tab.url)}/inject.css`],
+                files: ['styles/inject.css', `${endpoint(tab.url)}/style.css`],
                 target: { tabId: tab.id },
             });
             await chrome.scripting.executeScript({
-                files: [`${endpoint(tab.url)}/unmount.js`],
+                files: [`scripts/unmount.js`],
                 target: { tabId: tab.id },
             })
           }      

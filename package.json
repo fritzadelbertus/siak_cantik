@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass main/academic/summary/inject.scss main/academic/summary/inject.css",
+    "sass": "sass main/Academic/Summary/style.scss main/academic/summary/style.css",
+    "sass2": "sass styles/inject.scss styles/inject.css",
     "dev": "vite"
   },
   "author": "",

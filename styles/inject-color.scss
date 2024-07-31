@@ -1,0 +1,54 @@
+* {
+    border-color: $base-color-light !important;
+}
+h5 {
+    color: $text-color !important;
+}
+svg {
+    fill: $button-color !important;
+    &:hover {
+        fill: $button-color-light !important;
+    }
+}
+p {
+    color: $text-color !important
+}
+body {
+    background: $bg-color;
+    #app {
+        .file-nav {
+            li {
+                background-color: $base-color-dark;
+                &.active {
+                    background-color: $base-color;
+                }
+                a {
+                    color: $text-color;
+                }
+            }
+        }
+        #folder {
+            background: $folder-color;
+            ul {
+                @include blur;
+                .folder-name {
+                    color: $text-color;
+                }
+                svg {
+                    fill: $button-color;
+                    &:hover {
+                        fill: $button-color-light;
+                    }
+                }
+            }
+            div {
+                h1 {
+                    color: $text-color
+                }
+                #content{
+                    @include blur;
+                }
+            }
+        }
+    }
+}

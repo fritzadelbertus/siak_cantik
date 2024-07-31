@@ -1,0 +1,163 @@
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+p {
+  font-family: "Noto Sans", sans-serif !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+body div#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+body div#app .file-nav-container {
+  width: 700px;
+}
+body div#app .file-nav-container .file-nav {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+body div#app .file-nav-container .file-nav li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+body div#app .file-nav-container .file-nav li a {
+  padding: 10px;
+  min-width: 100px;
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+body div#app div#folder {
+  width: 700px;
+  height: 450px;
+  padding: 35px;
+  box-sizing: border-box;
+  border-radius: 0 12px 12px 12px;
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+}
+body div#app div#folder ul {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  width: 50px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  place-items: center;
+  list-style-type: none;
+}
+body div#app div#folder ul .folder-name {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: "Rubik Mono One", monospace;
+  font-size: 15px;
+}
+body div#app div#folder ul svg {
+  height: 25px;
+}
+body div#app div#folder ul svg:hover {
+  cursor: pointer;
+}
+body div#app div#folder div h1 {
+  font-family: "Rubik Mono One", monospace;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 40px;
+}
+body div#app div#folder div #content {
+  width: 550px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+* {
+  border-color: #ffc786 !important;
+}
+
+h5 {
+  color: #F7F7F7 !important;
+}
+
+svg {
+  fill: #F7F7F7 !important;
+}
+svg:hover {
+  fill: #ffc786 !important;
+}
+
+p {
+  color: #F7F7F7 !important;
+}
+
+body {
+  background: #121212;
+}
+body #app .file-nav li {
+  background-color: #b46102;
+}
+body #app .file-nav li.active {
+  background-color: #ff8906;
+}
+body #app .file-nav li a {
+  color: #F7F7F7;
+}
+body #app #folder {
+  background: linear-gradient(160deg, #ff8906 50%, #b46102);
+}
+body #app #folder ul {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8ox 32px 0 rgba(0, 0, 0, 0.37);
+}
+body #app #folder ul .folder-name {
+  color: #F7F7F7;
+}
+body #app #folder ul svg {
+  fill: #F7F7F7;
+}
+body #app #folder ul svg:hover {
+  fill: #ffc786;
+}
+body #app #folder div h1 {
+  color: #F7F7F7;
+}
+body #app #folder div #content {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8ox 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/*# sourceMappingURL=inject.css.map */

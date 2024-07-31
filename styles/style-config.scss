@@ -1,9 +1,13 @@
 $text-color: #F7F7F7;
 $button-color: #F7F7F7;
+$button-color-light: #ffc786;
 $bg-color:#121212;
 $base-color: #ff8906;
 $base-color-light: #ffc786;
 $base-color-dark: #b46102;
+$folder-color: linear-gradient(160deg, $base-color 50%, $base-color-dark);
+$folder-width: 700px;
+$folder-min-height: 450px;
 
 @mixin blur {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -13,5 +17,5 @@ $base-color-dark: #b46102;
     box-shadow: 0 8ox 32px 0 rgba(0,0,0,0.37);
 }
 
-$font-family : 'Secular One', sans-serif;
+$text-font : 'Noto Sans', sans-serif;
 $title-font: "Rubik Mono One", monospace;
