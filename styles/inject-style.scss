@@ -32,7 +32,22 @@ body {
                 padding: 0;
                 margin: 0;
                 display: flex;
+                position: relative;
+                & > a {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    margin-bottom: 10px;
+                    border-radius: 100%;
+                    svg {
+                        width: 30px;
+                        margin: 10px;
+                    }
+                }
                 li {
+                    min-width: 100px;
+                    font-family: $text-font;
+                    font-weight: bold;
                     list-style-type: none;
                     display: flex;
                     justify-content: center;
@@ -86,11 +101,13 @@ body {
             }
             div {
                 h1 {
-                    font-family: $title-font;
                     margin: 0;
                     margin-bottom: 10px;
                     text-align: right;
                     font-size: 40px;
+                    em {
+                        font-family: $title-font;
+                    }
                 }
                 #content {
                     width: 550px;

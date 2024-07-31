@@ -13,20 +13,22 @@ chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
     if (tab.url.startsWith(root)) {
         currState = await chrome.action.getBadgeText({ tabId: tab.id });
         if (changeInfo.status == 'complete' && tab.active && currState == 'ON') {
+            if (tab.url.endsWith('Welcome/')) {
+                await chrome.scripting.executeScript({
+                    files: [`scripts/redirect.js`],
+                    target: { tabId: tab.id },
+                })
+            }
             await chrome.scripting.insertCSS({
                 files: ['styles/inject.css', `${endpoint(tab.url)}/style.css`],
                 target: { tabId: tab.id },
             });
             await chrome.scripting.executeScript({
-                args: [ tab.url ],
-                function: (url) => {console.log(/https?:\/\/academic\.ui\.ac\.id\/([\w\/]+)/.exec(url)[1]);},
+                files: [
+                    `scripts/${tab.url.endsWith('Authentication/') ? 'authentication': 'inject'}.js`, 
+                    `scripts/mount.js`, `${endpoint(tab.url)}/inject.js`],
                 target: { tabId: tab.id },
             })
-            await chrome.scripting.executeScript({
-                files: [`scripts/inject.js`, `scripts/mount.js`, `${endpoint(tab.url)}/inject.js`],
-                target: { tabId: tab.id },
-            })
-            
         }
     }
     

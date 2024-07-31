@@ -1,0 +1,126 @@
+body div#app .file-nav-container .file-nav li {
+  padding: 10px;
+  font-size: 15px;
+}
+body div#app .file-nav-container .file-nav li:hover {
+  cursor: pointer;
+  background-color: #ffc786;
+}
+body div#app div#folder {
+  flex-direction: column;
+}
+body div#app div#folder div h1 {
+  border: 0;
+}
+body div#app div#folder div h1 em {
+  font-size: 40px;
+}
+body div#app div#folder div #content .contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+body div#app div#folder div #content .contact-box > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body div#app div#folder div #content .contact-box > div h5 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+body div#app div#folder div #content .contact-box > div div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body div#app div#folder div #content .contact-box > div div div {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+body div#app div#folder div #content .contact-box > div div div p {
+  font-size: 14px;
+}
+body div#app div#folder div #content .contact-box > div div div .phone {
+  font-size: 15px;
+  width: 300px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+body div#app div#folder div #content .contact-box > div div div .phone span {
+  width: 100%;
+}
+body div#app div#folder div #content .contact-box > div div div .phone a {
+  text-decoration: none;
+  color: #ffc786;
+}
+body div#app div#folder div #content .contact-box > div div div .phone a:hover {
+  color: #F7F7F7;
+}
+body div#app div#folder div #content .login-box {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: space-evenly;
+}
+body div#app div#folder div #content .login-box h5 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+body div#app div#folder div #content .login-box form {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body div#app div#folder div #content .login-box form p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  gap: 20px;
+}
+body div#app div#folder div #content .login-box form p label {
+  font-family: "Noto Sans", sans-serif;
+  color: #F7F7F7;
+  font-size: 15px;
+}
+body div#app div#folder div #content .login-box form p input {
+  border: 0;
+  border-bottom: 3px solid;
+  background: transparent;
+  color: #F7F7F7;
+  font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
+}
+body div#app div#folder div #content .login-box form p input:is(:-webkit-autofill, :autofill) {
+  background-color: #b46102;
+}
+body div#app div#folder div #content .login-box form #submit {
+  display: flex;
+  justify-content: center;
+}
+body div#app div#folder div #content .login-box form #submit input {
+  background-color: #b46102;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 3px solid;
+  border-color: #ffc786 #b46102 #b46102 #ffc786;
+}
+body div#app div#folder div #content .login-box form #submit input:hover {
+  cursor: pointer;
+  background-color: #ffc786;
+}
+
+/*# sourceMappingURL=style.css.map */

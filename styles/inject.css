@@ -35,8 +35,23 @@ body div#app .file-nav-container .file-nav {
   padding: 0;
   margin: 0;
   display: flex;
+  position: relative;
+}
+body div#app .file-nav-container .file-nav > a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  border-radius: 100%;
+}
+body div#app .file-nav-container .file-nav > a svg {
+  width: 30px;
+  margin: 10px;
 }
 body div#app .file-nav-container .file-nav li {
+  min-width: 100px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -87,11 +102,13 @@ body div#app div#folder ul svg:hover {
   cursor: pointer;
 }
 body div#app div#folder div h1 {
-  font-family: "Rubik Mono One", monospace;
   margin: 0;
   margin-bottom: 10px;
   text-align: right;
   font-size: 40px;
+}
+body div#app div#folder div h1 em {
+  font-family: "Rubik Mono One", monospace;
 }
 body div#app div#folder div #content {
   width: 550px;
@@ -119,10 +136,17 @@ p {
 }
 
 body {
-  background: #121212;
+  background: #121212 !important;
+}
+body #app .file-nav > a {
+  background-color: #ff8906;
+}
+body #app .file-nav > a:hover {
+  background-color: #b46102;
 }
 body #app .file-nav li {
   background-color: #b46102;
+  color: #F7F7F7;
 }
 body #app .file-nav li.active {
   background-color: #ff8906;
@@ -149,7 +173,7 @@ body #app #folder ul svg {
 body #app #folder ul svg:hover {
   fill: #ffc786;
 }
-body #app #folder div h1 {
+body #app #folder div h1 em {
   color: #F7F7F7;
 }
 body #app #folder div #content {

@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass main/Academic/Summary/style.scss main/academic/summary/style.css",
+    "sass": "sass main/Academic/Summary/style.scss main/Academic/Summary/style.css",
     "sass2": "sass styles/inject.scss styles/inject.css",
+    "sass3": "sass main/Authentication/style.scss main/Authentication/style.css",
     "dev": "vite"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "sass": "^1.77.8",
-    "vite": "^5.3.5"
+    "sass": "^1.77.8"
   }
 }

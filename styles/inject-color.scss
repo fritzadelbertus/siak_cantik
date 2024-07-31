@@ -14,11 +14,18 @@ p {
     color: $text-color !important
 }
 body {
-    background: $bg-color;
+    background: $bg-color !important;
     #app {
         .file-nav {
+            &>a {
+                background-color: $base-color;
+                &:hover {
+                    background-color: $base-color-dark;
+                }
+            }
             li {
                 background-color: $base-color-dark;
+                color: $text-color;
                 &.active {
                     background-color: $base-color;
                 }
@@ -42,7 +49,7 @@ body {
                 }
             }
             div {
-                h1 {
+                h1 em {
                     color: $text-color
                 }
                 #content{
