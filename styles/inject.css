@@ -148,6 +148,9 @@ body #app .file-nav li {
   background-color: #b46102;
   color: #F7F7F7;
 }
+body #app .file-nav li:hover {
+  background-color: #ffc786;
+}
 body #app .file-nav li.active {
   background-color: #ff8906;
 }

@@ -104,6 +104,9 @@ body div#app div#folder div #content .login-box form p input {
   font-weight: bold;
   font-family: "Noto Sans", sans-serif;
 }
+body div#app div#folder div #content .login-box form p input:is(:-webkit-autofill, :-webkit-autofill) {
+  background-color: #b46102;
+}
 body div#app div#folder div #content .login-box form p input:is(:-webkit-autofill, :autofill) {
   background-color: #b46102;
 }
@@ -121,6 +124,4 @@ body div#app div#folder div #content .login-box form #submit input {
 body div#app div#folder div #content .login-box form #submit input:hover {
   cursor: pointer;
   background-color: #ffc786;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

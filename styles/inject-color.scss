@@ -26,6 +26,9 @@ body {
             li {
                 background-color: $base-color-dark;
                 color: $text-color;
+                &:hover {
+                    background-color: $base-color-light;
+                }
                 &.active {
                     background-color: $base-color;
                 }

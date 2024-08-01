@@ -26,7 +26,7 @@ chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
             await chrome.scripting.executeScript({
                 files: [
                     `scripts/${tab.url.endsWith('Authentication/') ? 'authentication': 'inject'}.js`, 
-                    `scripts/mount.js`, `${endpoint(tab.url)}/inject.js`],
+                    `${endpoint(tab.url)}/inject.js`],
                 target: { tabId: tab.id },
             })
         }
