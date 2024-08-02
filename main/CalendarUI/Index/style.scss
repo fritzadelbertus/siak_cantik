@@ -1,0 +1,146 @@
+@import "../../../styles/style-config.scss";
+
+body div#app div#folder {
+    div#content {
+        min-height: unset;
+        height: 280px;
+        padding: 0;
+        .schedule-box {
+            position: relative;
+            padding: 10px;
+            width: inherit;
+            height: inherit;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            form {
+                position: absolute;
+                top:-45px;
+                left: 0px;
+                padding: 0;
+                margin: 0;
+                fieldset {
+                    padding: 0;
+                }
+                label {
+                    display: none;
+                }
+                select {
+                    padding: 5px;
+                    margin: 0;
+                    font-family: $text-font;
+                    font-weight: bold;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    background-color: $base-color-light;
+                    color: $base-color-dark;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    optgroup {
+                        background-color: $base-color-dark;
+                        color: $text-color;
+                        font-family: $text-font;
+                        font-weight: bold;
+                        option {
+                            background-color: $base-color-light;
+                            color: $base-color-dark;
+                        }
+                    }
+                }
+            }
+            h5 {
+                font-family: $text-font;
+                font-weight: bold;
+                margin: 0;
+                font-size: 25px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .schedule-nav {
+                position: absolute;
+                bottom:-40px;
+                left: 0px;
+                display: flex;
+                gap: 10px;
+                width: 100%;
+                a {
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 120px;
+                    text-align: center;
+                    text-decoration: none;
+                    color: $text-color;
+                    font-family: $text-font;
+                    font-size: 15px;
+                    font-weight: bold;
+                    background-color: $base-color-dark;
+                    border: 2px solid;
+                    &.current {
+                        color: $base-color-dark;
+                        background-color: $base-color-light;
+                    }
+                    &:hover {
+                        color: $base-color-dark;
+                        background-color: $base-color-light;
+                    }
+                }
+            }
+            .schedule-table {
+                height: 200px;
+                border-radius: 10px;
+                overflow-y: scroll;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                & > div {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    &.even {
+                        background-color: $base-color;
+                    }
+                    &.odd {background-color: $base-color-dark;}
+                    &:last-child {
+                        border-radius: 0 0 10px 10px;
+                    }
+                    p {
+                        font-size: 15px;
+                        width: 200px;
+                        text-align: center;
+                        &:hover {
+                            cursor: default;
+                        }
+                    }
+                    div {
+                        width: 300px;
+                        height: 20px;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                        position: relative;
+                        scrollbar-width: none;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                        p {
+                            display: block;
+                            width: unset;
+                            position: absolute;
+                            text-align: left;
+                            white-space: nowrap;
+                            left: 0px;
+                            &:hover {
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
