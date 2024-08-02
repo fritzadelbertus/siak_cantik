@@ -112,6 +112,7 @@ body div#app div#folder div h1 em {
 }
 body div#app div#folder div #content {
   width: 550px;
+  min-height: 300px;
   border-radius: 10px;
   padding: 10px;
 }
@@ -150,12 +151,14 @@ body #app .file-nav li {
 }
 body #app .file-nav li:hover {
   background-color: #ffc786;
+  color: #b46102;
 }
 body #app .file-nav li.active {
   background-color: #ff8906;
+  color: #F7F7F7;
 }
 body #app .file-nav li a {
-  color: #F7F7F7;
+  color: inherit;
 }
 body #app #folder {
   background: linear-gradient(160deg, #ff8906 50%, #b46102);

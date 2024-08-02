@@ -8,6 +8,9 @@ const root = "https://academic.ui.ac.id/main"
 const path_pattern = /https?:\/\/academic\.ui\.ac\.id\/([\w\/]+)/
 const endpoint = (url) => path_pattern.exec(url)[1]
 
+const isAuthentication = (url) => {
+    return url.endsWith('Authentication/') || url.endsWith('Authentication/Index')
+}
 
 chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
     if (tab.url.startsWith(root)) {
@@ -25,7 +28,7 @@ chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
             });
             await chrome.scripting.executeScript({
                 files: [
-                    `scripts/${tab.url.endsWith('Authentication/') ? 'authentication': 'inject'}.js`, 
+                    `scripts/${isAuthentication(tab.url) ? 'authentication': 'inject'}.js`, 
                     `${endpoint(tab.url)}/inject.js`],
                 target: { tabId: tab.id },
             })

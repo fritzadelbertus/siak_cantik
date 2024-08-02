@@ -47,7 +47,6 @@ for (let i = 0; i < dataPembayaran.length; i++) {
 
 tabelPembayaran.appendChild(tabelBody)
 
-console.log(user);
 
 
 document.querySelector('#content').appendChild(tabelPembayaran)

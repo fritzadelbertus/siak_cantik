@@ -21,7 +21,6 @@ for(let i = 1; i < tabel.children.length; i++) {
         mata_kuliah[smt].push([currChild.children[9].children[0], currChild.children[8].innerText, currChild.children[7].innerText])
     }    
 }
-console.log(smtLabel);
 const last_smt = smt
 smt = 1
 
@@ -91,4 +90,3 @@ tableTitle.innerHTML = `
 document.querySelector('#content').appendChild(headerNav)
 document.querySelector('#content').appendChild(tableTitle)
 document.querySelector('#content').appendChild(tabelNilai)
-console.log(mata_kuliah);
