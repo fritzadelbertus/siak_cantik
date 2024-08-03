@@ -17,5 +17,17 @@ $folder-min-height: 450px;
     box-shadow: 0 8ox 32px 0 rgba(0,0,0,0.37);
 }
 
+@mixin regular-font{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: $text-color;
+}
+
+@mixin unset-spacings {
+    margin: 0;
+    padding: 0;
+}
+
 $text-font : 'Noto Sans', sans-serif;
 $title-font: "Rubik Mono One", monospace;

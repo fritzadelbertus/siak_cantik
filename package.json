@@ -10,6 +10,7 @@
     "sass-bill": "sass main/Academic/Payment/style.scss main/Academic/Payment/style.css",
     "sass-slist": "sass main/Academic/StatusList/style.scss main/Academic/StatusList/style.css",
     "sass-call": "sass main/CalendarUI/Index/style.scss main/CalendarUI/Index/style.css",
+    "sass-sche": "sass main/Schedule/Index/style.scss main/Schedule/Index/style.css",
     "dev": "vite"
   },
   "author": "",
