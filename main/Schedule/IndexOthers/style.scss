@@ -130,6 +130,7 @@ body div#app div#folder {
                 height: 200px;
                 width: 450px;
                 background-color: $base-color-dark;
+                z-index: 0;
                 .front {
                     width: 200px;
                     height: 170px;
@@ -137,6 +138,7 @@ body div#app div#folder {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    background-color: transparent;
                     h6 {
                         @include regular-font;
                         @include unset-spacings;
@@ -144,8 +146,10 @@ body div#app div#folder {
                         text-align: center;
                         margin-bottom: 5px;
                         line-height: 22px;
+                        z-index: -1;
                     }
                     p {
+                        z-index: -1;
                         @include regular-font;
                         text-align: center;
                     }

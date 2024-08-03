@@ -38,4 +38,3 @@ for (let i = 0; i < stats.length; i++) {
 document.querySelector('#content').appendChild(statListTitle)
 document.querySelector('#content').appendChild(statusContainer)
 
-console.log(stats);

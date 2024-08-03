@@ -146,6 +146,7 @@ body div#app div#folder div#content .card-container .card-subject {
   height: 200px;
   width: 450px;
   background-color: #b46102;
+  z-index: 0;
 }
 body div#app div#folder div#content .card-container .card-subject .front {
   width: 200px;
@@ -154,6 +155,7 @@ body div#app div#folder div#content .card-container .card-subject .front {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: transparent;
 }
 body div#app div#folder div#content .card-container .card-subject .front h6 {
   font-family: "Noto Sans", sans-serif;
@@ -166,8 +168,10 @@ body div#app div#folder div#content .card-container .card-subject .front h6 {
   text-align: center;
   margin-bottom: 5px;
   line-height: 22px;
+  z-index: -1;
 }
 body div#app div#folder div#content .card-container .card-subject .front p {
+  z-index: -1;
   font-family: "Noto Sans", sans-serif;
   font-size: 15px;
   font-weight: bold;

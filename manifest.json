@@ -20,7 +20,7 @@
         "128": "logo/128x128.png"
         }
     },
-    "permissions": ["activeTab", "tabs", "scripting", "*://*/*" ],
+    "permissions": ["activeTab", "tabs", "scripting" ],
     "web_accessible_resources": [
         {
             "resources": [ "profile.png" ],
@@ -28,8 +28,8 @@
         }
     ],
     "host_permissions": [
-    "http://*/*",
-    "https://*/*"
+    "https://academic.ui.ac.id/main/*/*",
+    "http://academic.ui.ac.id/main/*/*"
     ]
 }
   

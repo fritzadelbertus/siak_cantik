@@ -25,7 +25,7 @@ let classTitle
 let classPreq
 let startInsert = false
 let pengajar
-const titlePattern = /[\w]+ - ([\w ,.\-&\/]+) \((\d) SKS, Term (\d+)\);[\n\t ]*[\w \.]+-(\d+)/
+const titlePattern = /[\w]+ - ([\w ():,.\-&\/]+) \((\d+) SKS, Term (\d+)\);[\n\t ]*[\w \.]+-(\d+)/
 const reqcapPattern = /Prasyarat:[ ]*[\w, -]*/
 const reqPattern = /\w\w\w\w\d\d\d\d\d\d - [\w &-]+/g
 const reqgPattern = /\w\w\w\w\d\d\d\d\d\d - ([\w &-]+)/
@@ -56,7 +56,6 @@ for (let j = 2; j < tabelboxbox.children.length; j++) {
         } else {
             kelas.push(k)
         }
-        console.log((classData.innerText));
         classTitle = titlePattern.exec(classData.innerText)
         classPreq = reqcapPattern.exec(classData.innerText)[0]
         classPreq = classPreq.match(reqPattern)
@@ -94,9 +93,6 @@ const changeClass = (e, p, d) => {
     } else if (subjectstate[`${d}`] < 0) {
         subjectstate[`${d}`] = kelas[d].childrens.length - 1
     }
-    console.log(kelas[d].childrens.length);
-    console.log(subjectstate[`${d}`]);
-    console.log(kelas[d]);
 
     parent = document.querySelector(`.kelas${d}`)
     parent.innerHTML = `<p>${kelas[d].childrens[subjectstate[`${d}`]].pengajar}</p>`
@@ -107,23 +103,42 @@ const changeClass = (e, p, d) => {
     parent.appendChild(anchor)
     parent.scrollTop = 0
 }
+
+let ptags
+const showPreq = (e,d) => {
+    e.target.querySelector('h6').innerText = 'Syarat'
+    ptags = e.target.querySelectorAll('p')
+    ptags[1].innerText = ''
+    ptags[0].innerText = ''
+    for (let q = 0; q < kelas[d].prerequisites.length; q++) {
+        ptags[0].innerHTML += `
+        - ${kelas[d].prerequisites[q]} <br>
+        `
+    } 
+}
+const showFront = (e, d) => {
+    e.target.querySelector('h6').innerText = `${kelas[d].name}`
+    ptags = e.target.querySelectorAll('p')
+    ptags[0].innerText = `Kurikulum - ${kelas[d].kurikulum}`
+    ptags[1].innerText = `${kelas[d].sks} SKS (SMT - ${kelas[d].term})`
+} 
+document.createElement('div').addEventListener
 const insertCard = (container) => {
     for (let j = 0; j < kelas.length; j++) {
         card.card = document.createElement('div')
         card.card.classList.add('card-subject')
         card.front = document.createElement('div')
         card.front.classList.add('front')
-        card.front.innerHTML = `<div class='front'>
+        card.front.innerHTML = `
             <h6>${kelas[j].name}</h6>
-            <p>Kurikulum - ${kelas[j].kurikulum}</p>
+            <p>Kurikulum - ${kelas[j].kurikulum} \n</p>
             <p>${kelas[j].sks} SKS (SMT - ${kelas[j].term})</p>
-            </div>
         `
-        card.card.appendChild(card.front)
         if (kelas[j].prerequisites != null) {
-            card.front.addEventListener('mouseover', () => {console.log('hello');})
-            card.front.addEventListener('mouseout', () => {console.log('hello');})
+            card.front.addEventListener('mouseover', (e) => {showPreq(e, j);})
+            card.front.addEventListener('mouseout', (e) => {showFront(e, j);})
         }
+        card.card.appendChild(card.front)
         detail.box = document.createElement('div')
         detail.box.classList.add('detail-box')
         card.detail = document.createElement('div')

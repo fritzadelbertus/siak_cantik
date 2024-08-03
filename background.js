@@ -34,7 +34,6 @@ chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
             })
         }
     }
-    
 })
 
 
@@ -67,9 +66,7 @@ chrome.action.onClicked.addListener(async (tab) => {
                 target: { tabId: tab.id },
             })
           }      
-    }
-
-    
+    }    
 });
 
 
