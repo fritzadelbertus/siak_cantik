@@ -45,7 +45,7 @@ Below are the urls that this extension supported
 1. Download Zip from this website and extract
 
    ![](./README/installation/3.png)
-2. Open [chrome://extensions/](chrome://extensions/) in Google Chrome
+2. Type [chrome://extensions/](chrome://extensions/) in Google Chrome search bar and press Enter
 3. Make sure to turn on 'Developer mode' in the upper right corner
 
    ![](./README/installation/1.png)
