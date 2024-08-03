@@ -76,13 +76,13 @@ The profile photo in the [Ringkasan](https://academic.ui.ac.id/main/Academic/Sum
 
 There are 4 different color palletes for this project, `Juicy-Orange(Default)`, `Radiant-Green`, `Lukewarm-Magenta` and `Arctic-Blue`.
 To implement them:
-1. Click the `main` dropdown button and select the color pallete
+1. Click the `main` dropdown button and select your desired color pallete
 
     ![](./README/installation/5.png)
 2. Follow the [Github Repository](#github-repository) installation process
 
 ### Advanced Customization
-For more customized color palletes and personalized features, the author suggest the user to tinker with the source code (assuming the user have basic knowledge on HTML, CSS, JavaScript, and npm). The user can start with modifying the `style-config.scss`.
+For more customized color palletes and personalized features, the author suggest the user to tinker with the source code (assuming the user have basic knowledge on HTML, CSS, JavaScript, and npm). The user can start with modifying the `style-config.scss` inside the `styles` folder.
 
 ## Author
 
