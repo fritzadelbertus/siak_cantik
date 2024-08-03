@@ -1,6 +1,6 @@
 # SIAK-CANTIK
 
-A Chrome Extension Project that injects styling to the this [SIAK-NG](https://academic.ui.ac.id/main/Authentication/) website
+A Chrome Extension Project that injects styling to the [SIAK-NG](https://academic.ui.ac.id/main/Authentication/) website
 
 ## Table of contents
 
