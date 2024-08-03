@@ -191,6 +191,7 @@ const selectLines = form.querySelectorAll('option:disabled')
 for (let i = 0; i < selectLines.length; i++) {
     selectLines[i].innerHTML =''
 }
+form.querySelector('#search').setAttribute('placeholder', 'Cari Mata Kuliah')
 
 document.querySelector('#content').appendChild(cardContainer)
 document.querySelector('#content').appendChild(classButtons)

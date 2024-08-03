@@ -12,7 +12,7 @@ body div#app div#folder {
             fieldset {
                 @include unset-spacings;
                 display: flex;
-                flex-direction: row-reverse;
+                flex-direction: row;
                 gap: 5px;
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -42,6 +42,9 @@ body div#app div#folder {
                     width: 130px;
                     border: 0;
                     border-bottom: 2px solid;
+                    &::placeholder {
+                        color: $text-color;
+                    }
                 }
                 #period {
                     width: 130px;

@@ -11,6 +11,7 @@
     "sass-slist": "sass main/Academic/StatusList/style.scss main/Academic/StatusList/style.css",
     "sass-call": "sass main/CalendarUI/Index/style.scss main/CalendarUI/Index/style.css",
     "sass-sche": "sass main/Schedule/Index/style.scss main/Schedule/Index/style.css",
+    "sass-schef": "sass main/Schedule/IndexOthers/style.scss main/Schedule/IndexOthers/style.css",
     "dev": "vite"
   },
   "author": "",
