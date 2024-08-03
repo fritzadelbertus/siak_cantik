@@ -7,6 +7,7 @@ A Chrome Extension Project that injects styling to the [SIAK-NG](https://academi
 - [Overview](#overview)
   - [Screenshot](#screenshot)
   - [Restrictions](#restrictions)
+  - [Next Update](#next-update)
 - [Installation](#installation)
   - [Chrome Web Store](#chrome-web-store)
   - [Github Repository](#github-repository)
@@ -35,6 +36,13 @@ Below are the urls that this extension supported
 - [Kalender Akademik](https://academic.ui.ac.id/main/CalendarUI/Index)
 - [Jadwal Kuliah](https://academic.ui.ac.id/main/Schedule/Index)
 - [Jadwal Kuliah Lengkap](https://academic.ui.ac.id/main/Schedule/IndexOthers)
+
+### Next Update
+List of urls pending to support this extension
+- [Lihat IRS](https://academic.ui.ac.id/main/CoursePlan/CoursePlanViewSummary)
+- [Isi/Ubah IRS](https://academic.ui.ac.id/main/CoursePlan/CoursePlanEdit)
+- [Add IRS](https://academic.ui.ac.id/main/CoursePlan/CoursePlanAdd)
+- [Drop IRS](https://academic.ui.ac.id/main/CoursePlan/CoursePlanDrop)
 
 ## Installation
 
