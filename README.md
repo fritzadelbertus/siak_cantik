@@ -54,7 +54,7 @@ Below are the urls that this extension supported
 
     ![](./README/installation/2.png)
 
-5. Find and select the extracted folder frop step #1
+5. Find and select the extracted folder from step #1
 6. Make sure the extension is on, refresh it, and you are ready to go!
 
     ![](./README/installation/4.png)
