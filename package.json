@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "sass-main": "sass styles/inject.scss styles/inject.css",
-    "sass-summary": "sass main/Academic/Summary/style.scss main/Academic/Summary/style.css",
+    "sass-summ": "sass main/Academic/Summary/style.scss main/Academic/Summary/style.css",
     "sass-auth": "sass main/Authentication/style.scss main/Authentication/style.css",
     "sass-hist": "sass main/Academic/HistoryByTerm/style.scss main/Academic/HistoryByTerm/style.css",
     "sass-bill": "sass main/Academic/Payment/style.scss main/Academic/Payment/style.css",
@@ -12,12 +12,14 @@
     "sass-call": "sass main/CalendarUI/Index/style.scss main/CalendarUI/Index/style.css",
     "sass-sche": "sass main/Schedule/Index/style.scss main/Schedule/Index/style.css",
     "sass-schef": "sass main/Schedule/IndexOthers/style.scss main/Schedule/IndexOthers/style.css",
-    "dev": "vite"
+    "dev": "vite",
+    "build-style": "npm-run-all sass-main sass-summ sass-auth sass-hist sass-bill sass-slist sass-call sass-sche sass-schef"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "sass": "^1.77.8"
   }
 }
