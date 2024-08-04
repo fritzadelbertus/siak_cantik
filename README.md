@@ -32,7 +32,6 @@ Below are the urls that this extension supported
 - [Riwayat](https://academic.ui.ac.id/main/Academic/HistoryByTerm)
 - [Pembayaran](https://academic.ui.ac.id/main/Academic/Payment)
 - [Status Akademis](https://academic.ui.ac.id/main/Academic/StatusList)
-- [Kalender Akademik](https://academic.ui.ac.id/main/Academic/StatusList)
 - [Kalender Akademik](https://academic.ui.ac.id/main/CalendarUI/Index)
 - [Jadwal Kuliah](https://academic.ui.ac.id/main/Schedule/Index)
 - [Jadwal Kuliah Lengkap](https://academic.ui.ac.id/main/Schedule/IndexOthers)
