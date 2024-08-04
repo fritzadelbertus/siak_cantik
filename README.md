@@ -44,7 +44,12 @@ List of urls pending to support this extension
 - [Add IRS](https://academic.ui.ac.id/main/CoursePlan/CoursePlanAdd)
 - [Drop IRS](https://academic.ui.ac.id/main/CoursePlan/CoursePlanDrop)
 
+List of pending features
+- Adding a back-info for [Ringkasan](https://academic.ui.ac.id/main/Academic/Summary) page
+- Adding customization to the Chrome Web Store version
 ## Installation
+
+**NOTE**: If you already installed SIAK-CANTIK from Chrome Web Store and want to change installation to Github Repository, make sure there are no SIAK-CANTIK extension in [chrome://extensions/](chrome://extensions/)
 
 ### Chrome Web Store
 
@@ -70,6 +75,8 @@ A quick install of this project is available in the Chrome Web Store. You can vi
     ![](./README/installation/4.png)
 
 ## Customization
+
+**NOTE**: Currently there are no customization for the Chrome Web Store Installation, for customization please follow the [Github Repository](#github-repository) installation.
 
 ### Custom Profile Photo
 The profile photo in the [Ringkasan](https://academic.ui.ac.id/main/Academic/Summary) can be easily customized
