@@ -48,6 +48,8 @@ List of urls pending to support this extension
 
 ### Chrome Web Store
 
+A quick install of this project is available in the Chrome Web Store. You can visit this product by clicking [this link](https://chromewebstore.google.com/detail/siak-cantik/ddgjglpedngdiclljopcmmpjdhnnjgkp?authuser=0&hl=en)
+
 ### Github Repository
 
 1. Download Zip from this website and extract
