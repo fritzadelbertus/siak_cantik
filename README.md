@@ -10,10 +10,7 @@ A Chrome Extension Project that injects styling to the [SIAK-NG](https://academi
   - [Next Update](#next-update)
 - [Installation](#installation)
   - [Chrome Web Store](#chrome-web-store)
-  - [Github Repository](#github-repository)
 - [Customization](#customization)
-  - [Custom Profile Photo](#custom-profile-photo)
-  - [Cutom Color Pallete](#custom-color-pallete)
   - [Advanced Customization](#advanced-customization)
 - [Author](#author)
 
@@ -23,7 +20,7 @@ This project aims to beautify the interface of SIAK-NG
 
 ### Screenshot
 
-![](./README/screenshots/preview-jo.png)
+![](./README/preview.png)
 
 ### Restrictions
 Below are the urls that this extension supported
@@ -46,59 +43,27 @@ List of urls pending to support this extension
 List of pending features
 - Adding a back-info for [Ringkasan](https://academic.ui.ac.id/main/Academic/Summary) page
 - Adding customization to the Chrome Web Store version
-## Installation
+- SIAK-WAR helper
 
-**NOTE**: If you already installed SIAK-CANTIK from Chrome Web Store and want to change installation to Github Repository, make sure there are no SIAK-CANTIK extension in [chrome://extensions/](chrome://extensions/)
+## Installation
 
 ### Chrome Web Store
 
-A quick install of this project is available in the Chrome Web Store. You can visit this product by clicking [this link](https://chromewebstore.google.com/detail/siak-cantik/ddgjglpedngdiclljopcmmpjdhnnjgkp?authuser=0&hl=en)
-
-### Github Repository
-
-1. Download Zip from this website and extract
-
-   ![](./README/installation/3.png)
-2. Type [chrome://extensions/](chrome://extensions/) in Google Chrome search bar and press Enter
-3. Make sure to turn on 'Developer mode' in the upper right corner
-
-   ![](./README/installation/1.png)
-
-4. Click the 'Load unpacked' button
-
-    ![](./README/installation/2.png)
-
-5. Find and select the extracted folder from step #1
-6. Make sure the extension is on, refresh it, and you are ready to go!
-
-    ![](./README/installation/4.png)
+This project is available to install in the Chrome Web Store. You can visit this product by clicking [this link](https://chromewebstore.google.com/detail/siak-cantik/ddgjglpedngdiclljopcmmpjdhnnjgkp?authuser=0&hl=en)
 
 ## Customization
 
-**NOTE**: Currently there are no customization for the Chrome Web Store Installation, for customization please follow the [Github Repository](#github-repository) installation.
+Custom color pallete, and profile photo is available in the popup screen accessed by clicking the extension.
 
-### Custom Profile Photo
-The profile photo in the [Ringkasan](https://academic.ui.ac.id/main/Academic/Summary) can be easily customized
+  ![](./README/custom-button.png)
 
-1. Follow the [Github Repository](#github-repository) installation process
-2. Prepare a 3x4 profile photo
-3. Rename the file into `profile.png`
-4. Replace the `profile.png` inside the extraced folder with your file from step #3
+Currently there are 4 themes and you can upload a custom profile photo
 
-### Custom Color Pallete
-![](./README/screenshots/preview-rg.png)
-![](./README/screenshots/preview-lm.png)
-![](./README/screenshots/preview-ab.png)
+  ![](./README/customization.png)
 
-There are 4 different color palletes for this project, `Juicy-Orange(Default)`, `Radiant-Green`, `Lukewarm-Magenta` and `Arctic-Blue`.
-To implement them:
-1. Click the `main` dropdown button and select your desired color pallete
-
-    ![](./README/installation/5.png)
-2. Follow the [Github Repository](#github-repository) installation process
 
 ### Advanced Customization
-For more customized color palletes and personalized features, the author suggest the user to tinker with the source code (assuming the user have basic knowledge on HTML, CSS, JavaScript, and npm). The user can start with modifying the `style-config.scss` inside the `styles` folder.
+For more customized color palletes and personalized features, the author suggest the user to tinker with the source code (assuming the user have basic knowledge on HTML, CSS, JavaScript).
 
 ## Author
 
