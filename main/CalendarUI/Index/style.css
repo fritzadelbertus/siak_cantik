@@ -1,144 +1,122 @@
-body div#app div#folder div#content {
-  min-height: unset;
-  height: 280px;
-  padding: 0;
+body div#app div#folder {
+    div#content {
+        min-height: unset;
+        height: 280px;
+        padding: 0;
+        .schedule-box {
+            position: relative;
+            padding: 10px;
+            width: inherit;
+            height: inherit;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            form {
+                position: absolute;
+                top:-45px;
+                left: 0px;
+                padding: 0;
+                margin: 0;
+                fieldset {
+                    padding: 0;
+                }
+                label {
+                    display: none;
+                }
+                select {
+                    padding: 5px;
+                    margin: 0;
+                    font-family: 'Noto Sans', sans-serif;
+                    font-weight: bold;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    optgroup {
+                        font-family: 'Noto Sans', sans-serif;
+                        font-weight: bold;
+                    }
+                }
+            }
+            h5 {
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: bold;
+                margin: 0;
+                font-size: 25px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .schedule-nav {
+                position: absolute;
+                bottom:-40px;
+                left: 0px;
+                display: flex;
+                gap: 10px;
+                width: 100%;
+                a {
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 120px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-family: 'Noto Sans', sans-serif;
+                    font-size: 15px;
+                    font-weight: bold;
+                    border: 2px solid;
+                }
+            }
+            .schedule-table {
+                height: 200px;
+                border-radius: 10px;
+                overflow-y: scroll;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                & > div {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    &:last-child {
+                        border-radius: 0 0 10px 10px;
+                    }
+                    p {
+                        font-size: 15px;
+                        width: 200px;
+                        text-align: center;
+                        &:hover {
+                            cursor: default;
+                        }
+                    }
+                    div {
+                        width: 300px;
+                        height: 20px;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                        position: relative;
+                        scrollbar-width: none;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                        p {
+                            display: block;
+                            width: unset;
+                            position: absolute;
+                            text-align: left;
+                            white-space: nowrap;
+                            left: 0px;
+                            &:hover {
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+    }
 }
-body div#app div#folder div#content .schedule-box {
-  position: relative;
-  padding: 10px;
-  width: inherit;
-  height: inherit;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-body div#app div#folder div#content .schedule-box form {
-  position: absolute;
-  top: -45px;
-  left: 0px;
-  padding: 0;
-  margin: 0;
-}
-body div#app div#folder div#content .schedule-box form fieldset {
-  padding: 0;
-}
-body div#app div#folder div#content .schedule-box form label {
-  display: none;
-}
-body div#app div#folder div#content .schedule-box form select {
-  padding: 5px;
-  margin: 0;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  border-radius: 5px;
-  background-color: #ffc786;
-  color: #b46102;
-  scrollbar-width: none;
-}
-body div#app div#folder div#content .schedule-box form select::-webkit-scrollbar {
-  display: none;
-}
-body div#app div#folder div#content .schedule-box form select optgroup {
-  background-color: #b46102;
-  color: #F7F7F7;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
-}
-body div#app div#folder div#content .schedule-box form select optgroup option {
-  background-color: #ffc786;
-  color: #b46102;
-}
-body div#app div#folder div#content .schedule-box h5 {
-  font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
-  margin: 0;
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-body div#app div#folder div#content .schedule-box .schedule-nav {
-  position: absolute;
-  bottom: -40px;
-  left: 0px;
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
-body div#app div#folder div#content .schedule-box .schedule-nav a {
-  border-radius: 5px;
-  padding: 5px;
-  width: 120px;
-  text-align: center;
-  text-decoration: none;
-  color: #F7F7F7;
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  background-color: #b46102;
-  border: 2px solid;
-}
-body div#app div#folder div#content .schedule-box .schedule-nav a.current {
-  color: #b46102;
-  background-color: #ffc786;
-}
-body div#app div#folder div#content .schedule-box .schedule-nav a:hover {
-  color: #b46102;
-  background-color: #ffc786;
-}
-body div#app div#folder div#content .schedule-box .schedule-table {
-  height: 200px;
-  border-radius: 10px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-}
-body div#app div#folder div#content .schedule-box .schedule-table::-webkit-scrollbar {
-  display: none;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 10px;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div.even {
-  background-color: #ff8906;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div.odd {
-  background-color: #b46102;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div:last-child {
-  border-radius: 0 0 10px 10px;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div p {
-  font-size: 15px;
-  width: 200px;
-  text-align: center;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div p:hover {
-  cursor: default;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div div {
-  width: 300px;
-  height: 20px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  position: relative;
-  scrollbar-width: none;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div div::-webkit-scrollbar {
-  display: none;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div div p {
-  display: block;
-  width: unset;
-  position: absolute;
-  text-align: left;
-  white-space: nowrap;
-  left: 0px;
-}
-body div#app div#folder div#content .schedule-box .schedule-table > div div p:hover {
-  cursor: default;
-}
-
-/*# sourceMappingURL=style.css.map */

@@ -1,69 +1,68 @@
-body div#app div#folder #content .tabel-bayar h5, body div#app div#folder #content .tabel-bayar h6 {
-  font-family: "Noto Sans", sans-serif;
-  margin: 0;
-  text-align: center;
-  color: #F7F7F7;
+body div#app div#folder {
+    #content {
+        .tabel-bayar {
+            h5,h6 {
+                font-family: 'Noto Sans', sans-serif;
+                margin: 0;
+                text-align: center;
+            }
+            h5 {
+                font-size: 20px;
+            }
+            h6 {
+                font-size: 17px;
+                border-bottom: 2px solid;
+                padding: 10px 0;
+            }
+            .header-tabel {
+                margin: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                p {
+                    font-family: 'Noto Sans', sans-serif;
+                    font-size: 15px;
+                    font-weight: bold;
+                    min-width: 110px;
+                    text-align: center;
+                    &:hover {
+                        cursor: default;
+                    }
+                }
+                p.right {
+                    min-width: 200px;
+                    text-align: center;
+                }
+            }
+            .data-tabel {
+                border-radius: 10px;
+                overflow-y: scroll;
+                scrollbar-width: none;
+                height: 200px;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    &:last-child {
+                        border-radius: 0 0 10px 10px;
+                    }
+                    p {
+                        font-family: 'Noto Sans', sans-serif;
+                        font-size: 15px;
+                        font-weight: bold;
+                        text-align: center;
+                        min-width: 110px;
+                        &:hover {
+                            cursor: default;
+                        }
+                    }
+                    .status {
+                        min-width: 200px;
+                    }
+                }
+            }
+        }
+    }
 }
-body div#app div#folder #content .tabel-bayar h5 {
-  font-size: 20px;
-}
-body div#app div#folder #content .tabel-bayar h6 {
-  font-size: 17px;
-  border-bottom: 2px solid;
-  padding: 10px 0;
-}
-body div#app div#folder #content .tabel-bayar .header-tabel {
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-between;
-}
-body div#app div#folder #content .tabel-bayar .header-tabel p {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  min-width: 110px;
-  text-align: center;
-}
-body div#app div#folder #content .tabel-bayar .header-tabel p:hover {
-  cursor: default;
-}
-body div#app div#folder #content .tabel-bayar .header-tabel p.right {
-  min-width: 200px;
-  text-align: center;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel {
-  border-radius: 10px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  height: 200px;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel::-webkit-scrollbar {
-  display: none;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel div {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 10px;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel div.even {
-  background-color: #b46102;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel div.odd {
-  background-color: #ff8906;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel div:last-child {
-  border-radius: 0 0 10px 10px;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel div p {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  text-align: center;
-  min-width: 110px;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel div p:hover {
-  cursor: default;
-}
-body div#app div#folder #content .tabel-bayar .data-tabel div .status {
-  min-width: 200px;
-}
-
-/*# sourceMappingURL=style.css.map */

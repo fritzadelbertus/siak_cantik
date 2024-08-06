@@ -53,7 +53,7 @@ for (let i = 0; i < schedule.length; i++) {
 
 }
 
-const oldButtons = document.querySelector('.tab ul')
+const oldButtons = document.querySelector('.tab ul').cloneNode(true)
 const buttons = {
     prev: oldButtons.children[0].children[0],
     curr: oldButtons.children[1].children[0],
@@ -89,7 +89,7 @@ scheduleBox.appendChild(newTable)
 
 const prevForm = document.querySelector('form')
 if (prevForm) {
-    scheduleBox.appendChild(prevForm)
+    scheduleBox.appendChild(prevForm.cloneNode(true))
 }
 
 

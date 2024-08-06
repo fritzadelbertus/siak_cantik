@@ -1,73 +1,84 @@
-#content p {
-  font-size: 15px;
+#content {
+    p {
+        font-size: 15px;
+    }
+    div.status-box{
+        display: flex;
+        place-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 10px;
+        div {
+            &.profile_photo {
+                width: 195px;
+                height: 260px;
+                overflow: hidden;
+                display: flex;
+                place-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                img {
+                    height: 100%;
+                }
+            }
+            &.stats{
+                h5 {
+                    margin: 0;
+                    margin-bottom: 10px;
+                    text-align: right;
+                    font-size: 20px;
+                    font-family: 'Noto Sans', sans-serif;
+                }
+                & > div {
+                    width: 300px;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 2px solid;
+                    margin-bottom: 5px;
+                    padding-bottom: 2px;
+                    p.r-stat {
+                        text-align: right;
+                    }
+                    &.ipk-container {
+                        margin-top: 30px;
+                        justify-content: space-evenly;
+                        span {
+                            width: 85px;
+                            height: 85px;
+                            padding: 10px;
+                            border: 3px solid;
+                            border-radius: 10px;
+                            display: flex;
+                            place-items: center;
+                            &.ipk {
+                                flex-direction: column;
+                                justify-content: space-evenly;
+                            }
+                            &.ip {
+                                width: 120px;
+                                justify-content: space-between;
+                                div {
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    place-items: center;
+                                    justify-content: space-between;
+                                }
+                                svg {
+                                    height: 25px;
+                                    &:hover {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        p.small {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }
-#content div.status-box {
-  display: flex;
-  place-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  gap: 10px;
-}
-#content div.status-box div.profile_photo {
-  width: 195px;
-  height: 260px;
-  overflow: hidden;
-  display: flex;
-  place-items: center;
-  justify-content: center;
-}
-#content div.status-box div.stats h5 {
-  margin: 0;
-  margin-bottom: 10px;
-  text-align: right;
-  font-size: 20px;
-  font-family: "Noto Sans", sans-serif;
-}
-#content div.status-box div.stats > div {
-  width: 300px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid;
-  margin-bottom: 5px;
-  padding-bottom: 2px;
-}
-#content div.status-box div.stats > div p.r-stat {
-  text-align: right;
-}
-#content div.status-box div.stats > div.ipk-container {
-  margin-top: 30px;
-  justify-content: space-evenly;
-}
-#content div.status-box div.stats > div.ipk-container span {
-  width: 85px;
-  height: 85px;
-  padding: 10px;
-  border: 3px solid;
-  border-radius: 10px;
-  display: flex;
-  place-items: center;
-}
-#content div.status-box div.stats > div.ipk-container span.ipk {
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-#content div.status-box div.stats > div.ipk-container span.ip {
-  width: 120px;
-  justify-content: space-between;
-}
-#content div.status-box div.stats > div.ipk-container span.ip div {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  justify-content: space-between;
-}
-#content div.status-box div.stats > div.ipk-container span.ip svg {
-  height: 25px;
-}
-#content div.status-box div.stats > div.ipk-container span.ip svg:hover {
-  cursor: pointer;
-}
-#content div.status-box div.stats > div.ipk-container p.small {
-  font-size: 10px;
-}/*# sourceMappingURL=style.css.map */

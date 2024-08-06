@@ -1,230 +1,202 @@
-body div#app div#folder div#content {
-  position: relative;
-  height: 300px;
-}
-body div#app div#folder div#content .first-form {
-  position: absolute;
-  bottom: -34px;
-  left: 0;
-  border: 0;
-  margin: 0;
-}
-body div#app div#folder div#content .first-form tbody {
-  display: flex;
-  gap: 10px;
-}
-body div#app div#folder div#content .first-form tbody td {
-  width: unset;
-}
-body div#app div#folder div#content .first-form tbody select {
-  margin: 0;
-  padding: 0;
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #F7F7F7;
-  width: 270px;
-  border: 0;
-  border-radius: 5px;
-  padding: 3px 10px;
-  background-color: #ffc786;
-  color: #b46102;
-  font-size: 12px;
-}
-body div#app div#folder div#content .first-form th {
-  display: none;
-}
-body div#app div#folder div#content .first-form td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-body div#app div#folder div#content .toolbar {
-  position: absolute;
-  top: -70px;
-  left: 0;
-  width: 250px;
-  border: 0;
-  background: unset;
-}
-body div#app div#folder div#content .toolbar form {
-  border: 0;
-}
-body div#app div#folder div#content .toolbar fieldset {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border: 0;
-}
-body div#app div#folder div#content .toolbar fieldset input, body div#app div#folder div#content .toolbar fieldset select {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #F7F7F7;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-}
-body div#app div#folder div#content .toolbar fieldset input[name=search] {
-  width: 130px;
-  border: 0;
-  border-bottom: 2px solid;
-}
-body div#app div#folder div#content .toolbar fieldset input[name=search]::placeholder {
-  color: #F7F7F7;
-}
-body div#app div#folder div#content .toolbar fieldset select {
-  border: 0;
-  border-radius: 5px;
-  padding: 3px 10px;
-  width: 180px;
-  background-color: #ffc786;
-  color: #b46102;
-  scrollbar-width: none;
-}
-body div#app div#folder div#content .toolbar fieldset select::-webkit-scrollbar {
-  display: none;
-}
-body div#app div#folder div#content .toolbar fieldset select optgroup {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #F7F7F7;
-  background-color: #b46102;
-  color: #F7F7F7;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
-}
-body div#app div#folder div#content .toolbar fieldset select optgroup option {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #F7F7F7;
-  background-color: #ffc786;
-  color: #b46102;
-}
-body div#app div#folder div#content .toolbar fieldset input.button {
-  margin: 0;
-  padding: 0;
-  border: 2px solid;
-  border-radius: 5px;
-  width: 110px;
-  padding: 3px 6px;
-  background-color: #b46102;
-  color: #ffc786;
-}
-body div#app div#folder div#content .toolbar fieldset input.button:hover {
-  cursor: pointer;
-  background-color: #ffc786;
-  color: #b46102;
-}
-body div#app div#folder div#content .toolbar fieldset label {
-  display: none;
-}
-body div#app div#folder div#content .card-container {
-  height: 100%;
-  overflow-y: scroll;
-  display: flex;
-  gap: 15px;
-  flex-direction: column;
-  scrollbar-width: thin;
-  place-items: center;
-}
-body div#app div#folder div#content .card-container .card-subject {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: center;
-  place-items: center;
-  border: 2px solid;
-  padding: 10px;
-  border-radius: 10px;
-  height: 200px;
-  width: 450px;
-  background-color: #b46102;
-  z-index: 0;
-}
-body div#app div#folder div#content .card-container .card-subject .front {
-  width: 200px;
-  height: 170px;
-  flex-basis: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: transparent;
-}
-body div#app div#folder div#content .card-container .card-subject .front h6 {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #F7F7F7;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 5px;
-  line-height: 22px;
-  z-index: -1;
-}
-body div#app div#folder div#content .card-container .card-subject .front p {
-  z-index: -1;
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #F7F7F7;
-  text-align: center;
-}
-body div#app div#folder div#content .card-container .card-subject .detail-box {
-  width: 200px;
-  height: 170px;
-  border: 2px solid;
-  border-radius: 5px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  justify-content: center;
-}
-body div#app div#folder div#content .card-container .card-subject .detail-box .card-detail {
-  height: 120px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  text-align: center;
-  flex-direction: column-reverse;
-  justify-content: right;
-  gap: 2px;
-  font-size: 12px;
-}
-body div#app div#folder div#content .card-container .card-subject .detail-box .card-detail::-webkit-scrollbar {
-  display: none;
-}
-body div#app div#folder div#content .card-container .card-subject .detail-box .card-detail a {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #F7F7F7;
-  text-decoration: none;
-}
-body div#app div#folder div#content .card-container .card-subject .detail-box > div {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-body div#app div#folder div#content .card-container .card-subject .detail-box > div button {
-  width: 50px;
-  background-color: #ff8906;
-  border: 2px solid;
-}
-body div#app div#folder div#content .card-container .card-subject .detail-box > div button:hover {
-  cursor: pointer;
-  background-color: #b46102;
-}
-body div#app div#folder div#content .card-container .card-subject .detail-box > div button svg {
-  width: 20px;
-}
+body div#app div#folder {
+    div#content {
+        position: relative;
+        height: 300px;
+        .first-form {
+            position: absolute;
+            bottom: -34px;
+            left: 0;
+            border: 0;
+            margin: 0;
+            tbody {
+                display: flex;
+                gap: 10px;
+                td {
+                    width: unset;
+                }
+                select {
+                    margin: 0;
+                    padding: 0;
+                    width: 270px;
+                    border: 0;
+                    border-radius: 5px;
+                    padding: 3px 10px;
+                    font-size: 12px;
+                }
+            }
+            th {
+                display: none;
+            }
+            td {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+        }
+        .toolbar {
+            position: absolute;
+            top: -70px;
+            left: 0;
+            width: 250px;
+            border: 0;
+            background: unset;
+            form {
+                border: 0;
+            }
+            fieldset {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                border: 0;
+                input, select {
+                    font-family: 'Noto Sans', sans-serif;
+                    font-size: 15px;
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 0;
+                    background: transparent;
+                }
+                input[name="search"] {
+                    width: 130px;
+                    border: 0;
+                    border-bottom: 2px solid;
+                }
+                select {
+                    border: 0;
+                    border-radius: 5px;
+                    padding: 3px 10px;
+                    width: 180px;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    optgroup {
+                        font-family: 'Noto Sans', sans-serif;
+                        font-size: 15px;
+                        font-weight: bold;
+                        font-weight: bold;
+                        option {
+                            font-family: 'Noto Sans', sans-serif;
+                            font-size: 15px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                input.button {
+                    margin: 0;
+                    padding: 0;
+                    border: 2px solid;
+                    border-radius: 5px;
+                    width: 110px;
+                    padding: 3px 6px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                label {
+                    display: none;
+                }
+            }
+        }
+        .card-container {
+            height: 100%;
+            overflow-y: scroll;
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+            scrollbar-width: thin;
+            place-items: center;
+            .card-subject {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                justify-content: center;
+                place-items: center;
+                border: 2px solid;
+                padding: 10px;
+                border-radius: 10px;
+                height: 200px;
+                width: 450px;
+                z-index: 0;
+                .front {
+                    width: 200px;
+                    height: 170px;
+                    flex-basis: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: transparent;
+                    h6 {
+                        font-family: 'Noto Sans', sans-serif;
+                        font-weight: bold;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 20px;
+                        text-align: center;
+                        margin-bottom: 5px;
+                        line-height: 22px;
+                        z-index: -1;
+                    }
+                    p {
+                        z-index: -1;
+                        font-family: 'Noto Sans', sans-serif;
+                        font-size: 15px;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+                .detail-box {
+                    width: 200px;
+                    height: 170px;
+                    border: 2px solid;
+                    border-radius: 5px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    justify-content: center;
+                    .card-detail {
+                        height: 120px;
+                        overflow-y: scroll;
+                        scrollbar-width: none;
+                        text-align: center;
+                        flex-direction: column-reverse;
+                        justify-content: right;
+                        gap: 2px;
+                        font-size: 12px;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                        a {
+                            font-family: 'Noto Sans', sans-serif;
+                            font-size: 15px;
+                            font-weight: bold;
+                            text-decoration: none;
+    
+                        }
+                    }
+                    & > div {
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        button {
+                            width: 50px;
+                            border: 2px solid;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                            svg {
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}                
 
-/*# sourceMappingURL=style.css.map */

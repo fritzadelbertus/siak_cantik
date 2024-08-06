@@ -22,7 +22,7 @@ let classData
 let classTitle
 let startInsert = false
 let pengajar
-const titlePattern = /[\w]+ - ([\w &]+)\((\d) SKS, Term (\d+)\); [\w \.]+-(\d+)/
+const titlePattern = /[\w]+ - ([\w ():,.\-&\/]+) \((\d+) SKS, Term (\d+)\);[\n\t ]*[\w \.]+-(\d+)/
 for (let i = 0; i < categories.length; i++) {
     tabelbox = categories[i].nextSibling.nextSibling;
     if (tabelbox.classList.contains('box')) {
@@ -185,7 +185,7 @@ internalButton.addEventListener('click', (e) => {handleChangeSubClass(0)})
 bersamaButton.addEventListener('click', (e) => {handleChangeSubClass(1)})
 eksternalButton.addEventListener('click', (e) => {handleChangeSubClass(2)})
 
-const form = document.querySelector('form')
+const form = document.querySelector('form').cloneNode(true)
 const formButton = form.querySelectorAll('.button')
 const selectLines = form.querySelectorAll('option:disabled')
 for (let i = 0; i < selectLines.length; i++) {

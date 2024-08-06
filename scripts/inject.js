@@ -244,4 +244,3 @@ link3.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Noto+Sans:i
 document.head.appendChild (link1);
 document.head.appendChild (link2);
 document.head.appendChild (link3);
-

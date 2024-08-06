@@ -1,93 +1,81 @@
-body div#app div#folder #content .header-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  place-items: center;
-  list-style-type: none;
-}
-body div#app div#folder #content .header-nav h5 {
-  margin: 0;
-  text-align: center;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  width: 300px;
-}
-body div#app div#folder #content .header-nav li {
-  display: flex;
-  place-items: center;
-}
-body div#app div#folder #content .header-nav li:hover ~ svg {
-  background-color: #ffc786;
-}
-body div#app div#folder #content .header-nav svg {
-  width: 20px;
-}
-body div#app div#folder #content .header-nav svg:hover {
-  cursor: pointer;
-}
-body div#app div#folder #content .table-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5px 10px;
-}
-body div#app div#folder #content .table-title span {
-  font-size: 15px;
-  color: #F7F7F7;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
-  min-width: 60px;
-}
-body div#app div#folder #content .table-title span.right {
-  text-align: center;
-}
-body div#app div#folder #content .tabel-nilai {
-  display: flex;
-  border-radius: 10px;
-  width: 100%;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  height: 200px;
-  flex-direction: column;
-}
-body div#app div#folder #content .tabel-nilai::-webkit-scrollbar {
-  display: none;
-}
-body div#app div#folder #content .tabel-nilai div {
-  padding: 5px 10px;
-  display: flex;
-  justify-content: space-between;
-}
-body div#app div#folder #content .tabel-nilai div.even {
-  background-color: #b46102;
-}
-body div#app div#folder #content .tabel-nilai div.odd {
-  background-color: #ff8906;
-}
-body div#app div#folder #content .tabel-nilai div:last-child {
-  border-radius: 0 0 10px 10px;
-}
-body div#app div#folder #content .tabel-nilai div p {
-  min-width: 60px;
-  text-align: center;
-  color: #F7F7F7;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-}
-body div#app div#folder #content .tabel-nilai div p:hover {
-  cursor: default;
-}
-body div#app div#folder #content .tabel-nilai div a {
-  text-decoration: none;
-  color: #F7F7F7;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-}
-body div#app div#folder #content .tabel-nilai div a:hover {
-  color: #ffc786;
-}
+body div#app div#folder {
+    #content {
+        .header-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            place-items: center;
+            list-style-type: none;
+            h5 {
+                margin: 0;
+                text-align: center;
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: bold;
+                font-size: 25px;
+                width: 300px;
+            }
+            li {
+                display: flex;
+                place-items: center;
+            }
+            svg {
+                width: 20px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
 
-/*# sourceMappingURL=style.css.map */
+        }
+        .table-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 5px 10px;
+            span {
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 15px;
+                font-weight: bold;
+                min-width: 60px;
+                &.right {
+                    text-align: center;
+                }
+            }
+        }
+        .tabel-nilai {
+            display: flex;
+            border-radius: 10px;
+            width: 100%;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            height: 200px;
+            flex-direction: column;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            div {
+                padding: 5px 10px;
+                display: flex;
+                justify-content: space-between;
+                &:last-child{
+                    border-radius: 0 0 10px 10px;
+                }
+                p {
+                    font-family: 'Noto Sans', sans-serif;
+                    font-size: 15px;
+                    font-weight: bold;
+                    min-width: 60px;
+                    text-align: center;
+                    &:hover {
+                        cursor: default;
+                    }
+                }
+                a {
+                    font-family: 'Noto Sans', sans-serif;
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }        
+        }
+    }
+}

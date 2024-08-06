@@ -1,4 +1,4 @@
-const tabel = document.querySelector('.box tbody')
+const tabel = document.querySelector('.box tbody').cloneNode(true)
 
 const mata_kuliah = { 0: [] }
 let smt = 0

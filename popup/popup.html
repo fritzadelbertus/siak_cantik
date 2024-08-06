@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>SIAK-CANTIK</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./popup.css">
+    </head>
+    <body>
+        <h1><em>SIAK-CANTIK</em></h1>
+        <div class="extension-status">
+            <p>Extension Status: </p>
+            <button class="extension-badge"></button>
+        </div>
+        <div class="customizations">
+            <div class="color-pallete">
+                <h2>Change Color Pallete</h2>
+                <div class="color-pallete-buttons">
+                    <button class="orange">Juicy Orange</button>
+                    <button class="blue">Arctic Blue</button>
+                    <button class="green">Radiant Green</button>
+                    <button class="magenta">Lukewarm Magenta</button>
+                </div>
+            </div>
+            <div class="custom-profile">
+                <h2>Change Profile Photo</h2>
+                <div class="profile-input-box">
+                    <label for="profile-input">Choose Image</label>
+                    <input id="profile-input" type="file" accept="image/jpeg,image/png">
+                    <div class="preview-box"></div>
+                    <button class="submit-profile-photo" disabled>Upload</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="./popup.js"></script>     
+    </body>
+</html>

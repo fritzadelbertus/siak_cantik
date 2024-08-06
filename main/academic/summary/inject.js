@@ -1,4 +1,3 @@
-
 // Extract Data
 
 const tabel = document.querySelectorAll('.box');
@@ -45,6 +44,7 @@ const ipCycleCheck = (csmt) => csmt > data_mahasiswa.ip.length ? 1 : csmt == 0 ?
 
 let currentSemester = 1
 const handleIP = (p) => {
+    const statusbox = document.querySelector('.status-box')
     currentSemester += p
     currentSemester = ipCycleCheck(currentSemester)
     if (data_mahasiswa.ip[currentSemester-1] == '-') {
@@ -54,52 +54,64 @@ const handleIP = (p) => {
     statusbox.querySelector('.ip .text-ip').innerText = data_mahasiswa.ip[currentSemester-1]
     statusbox.querySelector('.ip .small').innerText = `${generateSMT(currentSemester)}`
 }
+let result
+const getImageUrl = async () => {
+    result = await chrome.storage.local.get(["custom_profile"])
+    if (result) {
+        return "data:image/png;base64," + result.custom_profile
+    } else {
+        result = await chrome.storage.local.get(["profile_url"])
+        return chrome.runtime.getURL(result.profile_url)
+    }
+}
 
-const statusbox = document.createElement('div')
-statusbox.classList.add('status-box')
-statusbox.innerHTML =`
-    <div class="profile_photo">
-        <img src="${chrome.runtime.getURL('profile.png')}"/>
-    </div>
-    <div class="stats">
-        <h5> ${data_mahasiswa.nama} </h5>
-        <div>
-            <p>NPM</p><p class='r-stat'>${data_mahasiswa.npm}</p>
+getImageUrl().then((url) => {
+    const statusbox = document.createElement('div')
+    statusbox.classList.add('status-box')
+    statusbox.innerHTML =`
+        <div class="profile_photo">
+            <img src="${url}"/>
         </div>
-        <div>
-            <p>Angkatan</p><p class='r-stat'>${data_mahasiswa.angkatan}</p>
+        <div class="stats">
+            <h5> ${data_mahasiswa.nama} </h5>
+            <div>
+                <p>NPM</p><p class='r-stat'>${data_mahasiswa.npm}</p>
+            </div>
+            <div>
+                <p>Angkatan</p><p class='r-stat'>${data_mahasiswa.angkatan}</p>
+            </div>
+            <div>
+                <p>Program Studi</p><p class='r-stat'>${data_mahasiswa.studi}</p>
+            </div>
+            <div>
+                <p>SKS Lulus</p><p class='r-stat'>${data_mahasiswa.total_sks}</p>
+            </div>
+            <div class='ipk-container' style="border-bottom:0">
+                <span class='ipk'><p>IPK</p><p>${data_mahasiswa.ipk}</p></span>
+                <span class='ip'>
+                    <svg class='prev-ip' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 
+                        246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                    </svg>
+                    
+                    <div> 
+                        <p>IP</p>
+                        <p class='text-ip'>${data_mahasiswa.ip[currentSemester-1]}</p>
+                        <p class='small'>${generateSMT(currentSemester)}</p>
+                    </div>
+                    <svg class='next-ip' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 
+                        118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                    </svg>    
+                </span>
+            </div>
         </div>
-        <div>
-            <p>Program Studi</p><p class='r-stat'>${data_mahasiswa.studi}</p>
-        </div>
-        <div>
-            <p>SKS Lulus</p><p class='r-stat'>${data_mahasiswa.total_sks}</p>
-        </div>
-        <div class='ipk-container' style="border-bottom:0">
-            <span class='ipk'><p>IPK</p><p>${data_mahasiswa.ipk}</p></span>
-            <span class='ip'>
-                <svg class='prev-ip' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 
-                    246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-                </svg>
-                
-                <div> 
-                    <p>IP</p>
-                    <p class='text-ip'>${data_mahasiswa.ip[currentSemester-1]}</p>
-                    <p class='small'>${generateSMT(currentSemester)}</p>
-                </div>
-                <svg class='next-ip' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 
-                    118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-                </svg>    
-            </span>
-        </div>
-    </div>
-`
-statusbox.querySelector('.prev-ip').addEventListener('click', (e) => handleIP(-1));
-statusbox.querySelector('.next-ip').addEventListener('click', (e) => handleIP(1));
+    `
+    statusbox.querySelector('.prev-ip').addEventListener('click', (e) => handleIP(-1));
+    statusbox.querySelector('.next-ip').addEventListener('click', (e) => handleIP(1));
 
 
-// Inject to content
+    // Inject to content
 
-document.querySelector('#content').appendChild(statusbox)
+    document.querySelector('#content').appendChild(statusbox)
+})

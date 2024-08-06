@@ -1,3 +1,10 @@
+chrome.storage.local.set({ 
+    color: { primary: '#ff8906', light: '#ffc786', dark: '#b46102'}
+})
+chrome.storage.local.set({ 
+    profile_url: 'profile/profile-1.png'
+})
+
 chrome.runtime.onInstalled.addListener(() => {
     chrome.action.setBadgeText({
         text: "ON",
@@ -14,7 +21,7 @@ const isAuthentication = (url) => {
 
 chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
     if (tab.url.startsWith(root)) {
-        currState = await chrome.action.getBadgeText({ tabId: tab.id });
+        const currState = await chrome.action.getBadgeText({ tabId: tab.id });
         if (changeInfo.status == 'complete' && tab.active && currState == 'ON') {
             if (tab.url.endsWith('Welcome/')) {
                 await chrome.scripting.executeScript({
@@ -26,47 +33,40 @@ chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
                 files: ['styles/inject.css', `${endpoint(tab.url)}/style.css`],
                 target: { tabId: tab.id },
             });
-            await chrome.scripting.executeScript({
-                files: [
-                    `scripts/${isAuthentication(tab.url) ? 'authentication': 'inject'}.js`, 
-                    `${endpoint(tab.url)}/inject.js`],
-                target: { tabId: tab.id },
-            })
+            console.log(isAuthentication(tab.url));
+            
+            if (isAuthentication(tab.url)) {
+                await chrome.scripting.executeScript({
+                    files: [
+                        `scripts/authentication.js`, 
+                        `scripts/style.js`,
+                        `main/Authentication/inject.js`, 
+                        `main/Authentication/style.js`,
+                    ],
+                    target: { tabId: tab.id },
+                })
+            } else {
+                await chrome.scripting.executeScript({
+                    files: [
+                        `scripts/inject.js`, 
+                        `scripts/style.js`,
+                        `${endpoint(tab.url)}/inject.js`, 
+                        `${endpoint(tab.url)}/style.js`,
+                    ],
+                    target: { tabId: tab.id },
+                })
+            }
         }
     }
 })
 
+chrome.storage.onChanged.addListener((changes, namespace) => {
+    chrome.tabs.query({active: true}, async (tabs) => {
+        const tab = tabs[0]
 
-
-chrome.action.onClicked.addListener(async (tab) => {
-    if (tab.url.startsWith(root)) {
-        const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
-        const nextState = prevState === 'ON' ? 'OFF' : 'ON'
-
-        await chrome.action.setBadgeText({
-            tabId: tab.id,
-            text: nextState,
-        });
-        if (nextState === "ON") {
-            await chrome.scripting.insertCSS({
-                files: ['styles/inject.css', `${endpoint(tab.url)}/style.css`],
-                target: { tabId: tab.id },
-            });
-            await chrome.scripting.executeScript({
-                files: [`scripts/mount.js`],
-                target: { tabId: tab.id },
-            })
-          } else if (nextState === "OFF") {
-            await chrome.scripting.removeCSS({
-                files: ['styles/inject.css', `${endpoint(tab.url)}/style.css`],
-                target: { tabId: tab.id },
-            });
-            await chrome.scripting.executeScript({
-                files: [`scripts/unmount.js`],
-                target: { tabId: tab.id },
-            })
-          }      
-    }    
+        await chrome.scripting.executeScript({
+            files: [`scripts/style.js`, `${endpoint(tab.url)}/style.js`],
+            target: { tabId:  tab.id },
+        })
+    })
 });
-
-
