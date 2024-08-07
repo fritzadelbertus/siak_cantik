@@ -156,6 +156,5 @@ toggleButton.innerText = 'Lihat IP/IPK'
 toggleButton.addEventListener('click', handleToggleButton)
 document.querySelector('#content').appendChild(statusbox)
 document.querySelector('#content').appendChild(toggleButton)
-console.log('hello 2');
     
 

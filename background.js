@@ -1,7 +1,5 @@
 chrome.storage.local.set({ 
-    color: { primary: '#ff8906', light: '#ffc786', dark: '#b46102'}
-})
-chrome.storage.local.set({ 
+    color: { primary: '#ff8906', light: '#ffc786', dark: '#b46102'},
     profile_url: 'profile/profile-1.png'
 })
 
@@ -33,7 +31,6 @@ chrome.tabs.onUpdated.addListener( async (tabId, changeInfo, tab) => {
                 files: ['styles/inject.css', `${endpoint(tab.url)}/style.css`],
                 target: { tabId: tab.id },
             });
-            console.log(isAuthentication(tab.url));
             
             if (isAuthentication(tab.url)) {
                 await chrome.scripting.executeScript({

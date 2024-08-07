@@ -54,7 +54,6 @@ for (let i = 0; i < schedule.length; i++) {
 }
 
 const oldButtons = document.querySelector('.tab ul').cloneNode(true)
-console.log(oldButtons);
 
 const buttons = {
     prev: oldButtons.children[0].children[0],
@@ -95,15 +94,11 @@ scheduleBox.appendChild(newTable)
 
 const prevForm = document.querySelector('form')
 if (prevForm) {
-    scheduleBox.appendChild(prevForm.cloneNode(true))
+    scheduleBox.appendChild(prevForm)
 }
 
 
 document.querySelector('#content').appendChild(scheduleBox)
-
-
-
-
 
 const eventDesc = newTable.querySelectorAll('.description')
 const injectKeyframe = (i,end) => {
@@ -113,14 +108,11 @@ const injectKeyframe = (i,end) => {
     }
     `
 }
-const addKeyframes = () => {
-    for (let i = 0; i < eventDesc.length; i++) {
-        if (eventDesc[i].offsetWidth > 300) {
-            keyframes.innerHTML += injectKeyframe(i, eventDesc[i].offsetWidth - 300)    
-            eventDesc[i].addEventListener('mouseover', (e) => { startScroll(e,i) })
-            eventDesc[i].addEventListener('mouseout', (e) => { revertScroll(e,i) })
-            eventDesc[i].addEventListener('click', (e) => { freezeScroll(e,i) })
-        }   
-    }
+for (let i = 0; i < eventDesc.length; i++) {
+    if (eventDesc[i].offsetWidth > 300) {
+        keyframes.innerHTML += injectKeyframe(i, eventDesc[i].offsetWidth - 300)    
+        eventDesc[i].addEventListener('mouseover', (e) => { startScroll(e,i) })
+        eventDesc[i].addEventListener('mouseout', (e) => { revertScroll(e,i) })
+        eventDesc[i].addEventListener('click', (e) => { freezeScroll(e,i) })
+    }   
 }
-setTimeout(addKeyframes, 1000)

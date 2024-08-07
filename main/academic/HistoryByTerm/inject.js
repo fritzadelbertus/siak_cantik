@@ -27,7 +27,6 @@ for(let i = 1; i < tabel.children.length; i++) {
 const last_smt = smt
 smt = 1
 
-console.log(mata_kuliah);
 
 
 const gradeToScore = (e, smt, i) => e.target.innerText = mata_kuliah[smt][i][2] 
