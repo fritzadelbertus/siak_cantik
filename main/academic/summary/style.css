@@ -1,84 +1,154 @@
 #content {
+    height: 315px;
+    position: relative;
     p {
         font-size: 15px;
     }
+    & > button {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: bold;
+        position: absolute;
+        padding: 5px 10px;
+        top: -40px;
+        left: 0;
+        border-radius: 5px;
+        border: 2px solid;
+        width: 110px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
     div.status-box{
-        display: flex;
-        place-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        gap: 10px;
-        div {
-            &.profile_photo {
-                width: 195px;
-                height: 260px;
-                overflow: hidden;
-                display: flex;
-                place-items: center;
-                justify-content: center;
-                border-radius: 10px;
-                img {
-                    height: 100%;
+        .back {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            place-items: center;
+            gap: 20px;
+            h5 {
+                margin: 0;
+                text-align: right;
+                font-size: 20px;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            .tabel-container {
+                border-radius: 7px;
+                overflow-x: hidden;
+                border: 2px solid;
+                width: fit-content;
+                height: 140px;
+                overflow-y: scroll;
+                scrollbar-width: none;
+                flex-direction: column;
+                &::-webkit-scrollbar {
+                    display: none;
                 }
             }
-            &.stats{
-                h5 {
-                    margin: 0;
-                    margin-bottom: 10px;
-                    text-align: right;
-                    font-size: 20px;
-                    font-family: 'Noto Sans', sans-serif;
-                }
-                & > div {
-                    width: 300px;
+            .ipk-container {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                span {
+                    width: 85px;
+                    height: 85px;
+                    padding: 10px;
+                    border: 3px solid;
+                    border-radius: 10px;
                     display: flex;
-                    justify-content: space-between;
-                    border-bottom: 2px solid;
-                    margin-bottom: 5px;
-                    padding-bottom: 2px;
-                    p.r-stat {
-                        text-align: right;
-                    }
-                    &.ipk-container {
-                        margin-top: 30px;
+                    place-items: center;
+                    &.ipk {
+                        flex-direction: column;
                         justify-content: space-evenly;
-                        span {
-                            width: 85px;
-                            height: 85px;
-                            padding: 10px;
-                            border: 3px solid;
-                            border-radius: 10px;
+                    }
+                    &.ip {
+                        width: 120px;
+                        justify-content: space-between;
+                        div {
+                            height: 100%;
                             display: flex;
+                            flex-direction: column;
                             place-items: center;
-                            &.ipk {
-                                flex-direction: column;
-                                justify-content: space-evenly;
-                            }
-                            &.ip {
-                                width: 120px;
-                                justify-content: space-between;
-                                div {
-                                    height: 100%;
-                                    display: flex;
-                                    flex-direction: column;
-                                    place-items: center;
-                                    justify-content: space-between;
-                                }
-                                svg {
-                                    height: 25px;
-                                    &:hover {
-                                        cursor: pointer;
-                                    }
-                                }
+                            justify-content: space-between;
+                        }
+                        svg {
+                            height: 25px;
+                            &:hover {
+                                cursor: pointer;
                             }
                         }
-                        p.small {
-                            font-size: 10px;
-                        }
+                    }
+                }
+                p.small {
+                    font-size: 10px;
+                }
+            }
+            table {
+                margin: 0;
+                tbody {
+                    td {
+                        font-family: 'Noto Sans', sans-serif;
+                        padding: 0 5px;
+                        text-align: center;
+                        background: unset;
+                    }
+                    th {
+                        padding: 0 5px;
+                    }
+                    tr:last-child {
+                        display: none;
                     }
                 }
             }
         }
-
+        .front {
+            display: flex;
+            place-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            gap: 10px;
+            div {
+                &.profile_photo {
+                    width: 195px;
+                    height: 260px;
+                    overflow: hidden;
+                    display: flex;
+                    place-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    img {
+                        height: 100%;
+                    }
+                }
+                &.stats{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    h5 {
+                        margin: 0;
+                        margin-bottom: 10px;
+                        text-align: right;
+                        font-size: 20px;
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                    & > div {
+                        width: 300px;
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 2px solid;
+                        padding-bottom: 5px;
+                        p {
+                            width: 125px;
+                            display: flex;
+                            place-items: center;
+                        }
+                        p.r-stat {
+                            width: 170px;
+                            text-align: right;
+                            justify-content: right;
+                        }
+                    }
+                }
+            }            
+        }
     }
 }

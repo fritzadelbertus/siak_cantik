@@ -54,10 +54,12 @@ for (let i = 0; i < schedule.length; i++) {
 }
 
 const oldButtons = document.querySelector('.tab ul').cloneNode(true)
+console.log(oldButtons);
+
 const buttons = {
     prev: oldButtons.children[0].children[0],
     curr: oldButtons.children[1].children[0],
-    next: oldButtons.children[2].children[0]
+    next: oldButtons.children.length > 2 ? oldButtons.children[2].children[0]: null,
 }
 
 
@@ -70,12 +72,16 @@ const isCurrent = (text) => {
 }
 
 buttons.curr.classList.add(isCurrent(buttons.curr.innerText) ? 'current' : document.URL.endsWith('/Index') ? 'current' : 'n')
-buttons.next.classList.add(isCurrent(buttons.next.innerText) ? 'current' : 'n')
+
 const newButtons = document.createElement('div')
 newButtons.classList.add('schedule-nav')
 newButtons.appendChild(buttons.prev)
 newButtons.appendChild(buttons.curr)
-newButtons.appendChild(buttons.next)
+
+if (buttons.next) {
+    buttons.next.classList.add(isCurrent(buttons.next.innerText) ? 'current' : 'n')
+    newButtons.appendChild(buttons.next)
+}
 
 const scheduleTitle = document.createElement('h5')
 scheduleTitle.innerText = 'KALENDER AKADEMIK'

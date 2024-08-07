@@ -16,13 +16,19 @@ for(let i = 1; i < tabel.children.length; i++) {
             smtLabel.push(`SEMESTER ${smt-spCount}`)
         }
         mata_kuliah[smt] = []
-    } else if (currChild.children[0].classList.contains('ri')) {
+    } else if (currChild.children[0].classList.contains('ri') && currChild.children.length < 10) {
+        currChild.children[8].children[0].innerText = currChild.children[3].innerText
+        mata_kuliah[smt].push([currChild.children[8].children[0], currChild.children[7].children[0]])
+    } else {
         currChild.children[9].children[0].innerText = currChild.children[3].innerText
         mata_kuliah[smt].push([currChild.children[9].children[0], currChild.children[8].innerText, currChild.children[7].innerText])
-    }    
+    }
 }
 const last_smt = smt
 smt = 1
+
+console.log(mata_kuliah);
+
 
 const gradeToScore = (e, smt, i) => e.target.innerText = mata_kuliah[smt][i][2] 
 const scoreToGrade = (e, smt, i) => e.target.innerText = mata_kuliah[smt][i][1] 
@@ -32,10 +38,15 @@ const applyDataInsertion = (parent, smt, i) => {
     adibox = document.createElement('div')
     adibox.classList.add( i%2 == 0? 'even' : 'odd' )
     adibox.appendChild(mata_kuliah[smt][i][0])
-    adibox.innerHTML += `<p class='grade'>${mata_kuliah[smt][i][1]}</p>`
+
+    if (mata_kuliah[smt][i].length < 3) {
+        adibox.appendChild(mata_kuliah[smt][i][1])
+    } else {
+        adibox.innerHTML += `<p class='grade'>${mata_kuliah[smt][i][1]}</p>`
+        adibox.querySelector('.grade').addEventListener('mouseover', (e) => { gradeToScore(e,smt,i) })
+        adibox.querySelector('.grade').addEventListener('mouseout', (e) => { scoreToGrade(e,smt,i) })
+    }
     parent.appendChild(adibox)
-    adibox.querySelector('.grade').addEventListener('mouseover', (e) => { gradeToScore(e,smt,i) })
-    adibox.querySelector('.grade').addEventListener('mouseout', (e) => { scoreToGrade(e,smt,i) })
 }
 
 
