@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "SIAK-CANTIK",
     "description": "Add modern styling to the old SIAK-NG",
-    "version": "1.1",
+    "version": "1.4",
     "icons": {
         "16": "logo/16x16.png",
         "32": "logo/32x32.png",

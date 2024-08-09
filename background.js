@@ -9,6 +9,12 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
+chrome.windows.onCreated.addListener(() => {
+    chrome.action.setBadgeText({
+        text: "ON",
+    });
+});
+
 const root = "https://academic.ui.ac.id/main"
 const path_pattern = /https?:\/\/academic\.ui\.ac\.id\/([\w\/]+)/
 const endpoint = (url) => path_pattern.exec(url)[1]
