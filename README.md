@@ -41,8 +41,6 @@ List of urls pending to support this extension
 - [Drop IRS](https://academic.ui.ac.id/main/CoursePlan/CoursePlanDrop)
 
 List of pending features
-- Adding a back-info for [Ringkasan](https://academic.ui.ac.id/main/Academic/Summary) page
-- Adding customization to the Chrome Web Store version
 - SIAK-WAR helper
 
 ## Installation
